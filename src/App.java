@@ -13,7 +13,7 @@ public class App {
             }
         }
 
-        //Gets the wanted string parts from arr1
+        //Gets the wanted string parts from arr2
         for (int index : arr2) {
             if (index >= 0 && index < str2.length()) {
                 result.append(str2.charAt(index));
@@ -24,6 +24,12 @@ public class App {
 
     }
     public static void main(String[] args) {
-        System.out.println(compute(new Integer[0], new Integer[0], "1", "2"));
+        Integer[] arr1 = {0, 2};
+        Integer[] arr2 = {1, 3};
+        String str1 = "Hello";
+        String str2 = "World";
+
+        String result = App.compute(arr1, arr2, str1, str2);
+        System.out.println("Result: " + result);
     }
 }
