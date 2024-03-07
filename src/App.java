@@ -3,10 +3,24 @@ public class App {
 
     //Our method going to get first strings i'th indexes which are represented in the first array
     //and same for the second one than concat the selected strings.
-    public static int compute(Integer[] arr, Integer[] arr2, String str1, String str2){
+    public static String compute(Integer[] arr1, Integer[] arr2, String str1, String str2){
+        StringBuilder result = new StringBuilder();
 
+        //Gets the wanted string parts from arr1
+        for (int index : arr1) {
+            if (index >= 0 && index < str1.length()) {
+                result.append(str1.charAt(index));
+            }
+        }
 
-        return 0;
+        //Gets the wanted string parts from arr1
+        for (int index : arr2) {
+            if (index >= 0 && index < str2.length()) {
+                result.append(str2.charAt(index));
+            }
+        }
+
+        return result.toString();
 
     }
     public static void main(String[] args) {
