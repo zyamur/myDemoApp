@@ -1,4 +1,5 @@
-package main.java.com.mycompany.app;
+package com.mycompany.app;
+
 
 public class App {
 

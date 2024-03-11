@@ -1,13 +1,16 @@
-package test.java.com.mycompany.app;
+package com.mycompany.app;
 
-import main.java.com.mycompany.app.App;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
+/**
+ * Unit test for simple App.
+ */
 public class AppTest {
 
     @Test
-    void testComputeValidIndexes() {
+    public void testComputeValidIndexes() {
         Integer[] arr1 = {1, 3};
         Integer[] arr2 = {2};
         String str1 = "Alone";
@@ -17,7 +20,7 @@ public class AppTest {
     }
 
     @Test
-    void testComputeEmptyArrays() {
+    public void testComputeEmptyArrays() {
         Integer[] arr1 = {};
         Integer[] arr2 = {};
         String str1 = "Notso";
@@ -27,7 +30,7 @@ public class AppTest {
     }
 
     @Test
-    void testComputeOutOfRange() {
+    public void testComputeOutOfRange() {
         Integer[] arr1 = {6};
         Integer[] arr2 = {1, 3};
         String str1 = "Rick";
@@ -37,7 +40,7 @@ public class AppTest {
     }
 
     @Test
-    void testComputeEmptyStrings() {
+    public void testComputeEmptyStrings() {
         Integer[] arr1 = {1, 2};
         Integer[] arr2 = {0};
         String str1 = "";
@@ -47,7 +50,7 @@ public class AppTest {
     }
 
     @Test
-    void testComputeNullStrings() {
+    public void testComputeNullStrings() {
         Integer[] arr1 = {1, 2};
         Integer[] arr2 = {0};
         String str1 = null;
@@ -57,7 +60,7 @@ public class AppTest {
     }
 
     @Test
-    void testComputeNullArrays() {
+    public void testComputeNullArrays() {
         Integer[] arr1 = null;
         Integer[] arr2 = null;
         String str1 = "Nobody";
@@ -67,7 +70,7 @@ public class AppTest {
     }
 
     @Test
-    void testComputeWithMixedValidAndInvalidIndices() {
+    public void testComputeWithMixedValidAndInvalidIndices() {
         Integer[] arr1 = {1, 6};
         Integer[] arr2 = {0, 3};
         String str1 = "Me";
