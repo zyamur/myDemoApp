@@ -2,6 +2,8 @@ package com.mycompany.app;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -11,8 +13,11 @@ public class AppTest {
 
     @Test
     public void testComputeValidIndexes() {
-        Integer[] arr1 = {1, 3};
-        Integer[] arr2 = {2};
+        ArrayList<Integer> arr1 = new ArrayList<>();
+        arr1.add(1);
+        arr1.add(3);
+        ArrayList<Integer> arr2 = new ArrayList<>();
+        arr2.add(2);
         String str1 = "Alone";
         String str2 = "Warrior";
         String expected = "lnr";
@@ -21,8 +26,8 @@ public class AppTest {
 
     @Test
     public void testComputeEmptyArrays() {
-        Integer[] arr1 = {};
-        Integer[] arr2 = {};
+        ArrayList<Integer> arr1 = new ArrayList<>();
+        ArrayList<Integer> arr2 = new ArrayList<>();
         String str1 = "Notso";
         String str2 = "much";
         String expected = "";
@@ -31,8 +36,11 @@ public class AppTest {
 
     @Test
     public void testComputeOutOfRange() {
-        Integer[] arr1 = {6};
-        Integer[] arr2 = {1, 3};
+        ArrayList<Integer> arr1 = new ArrayList<>();
+        arr1.add(6);
+        ArrayList<Integer> arr2 = new ArrayList<>();
+        arr2.add(1);
+        arr2.add(3);
         String str1 = "Rick";
         String str2 = "Morty";
         String expected = "ot";
@@ -41,8 +49,11 @@ public class AppTest {
 
     @Test
     public void testComputeEmptyStrings() {
-        Integer[] arr1 = {1, 2};
-        Integer[] arr2 = {0};
+        ArrayList<Integer> arr1 = new ArrayList<>();
+        arr1.add(1);
+        arr1.add(2);
+        ArrayList<Integer> arr2 = new ArrayList<>();
+        arr2.add(0);
         String str1 = "";
         String str2 = "";
         String expected = "";
@@ -51,8 +62,11 @@ public class AppTest {
 
     @Test
     public void testComputeNullStrings() {
-        Integer[] arr1 = {1, 2};
-        Integer[] arr2 = {0};
+        ArrayList<Integer> arr1 = new ArrayList<>();
+        arr1.add(4);
+        arr1.add(3);
+        ArrayList<Integer> arr2 = new ArrayList<>();
+        arr2.add(0);
         String str1 = null;
         String str2 = null;
         String expected = "";
@@ -61,8 +75,8 @@ public class AppTest {
 
     @Test
     public void testComputeNullArrays() {
-        Integer[] arr1 = null;
-        Integer[] arr2 = null;
+        ArrayList<Integer> arr1 = null;
+        ArrayList<Integer> arr2 = null;
         String str1 = "Nobody";
         String str2 = "Knows";
         String expected = "";
@@ -70,9 +84,13 @@ public class AppTest {
     }
 
     @Test
-    public void testComputeWithMixedValidAndInvalidIndices() {
-        Integer[] arr1 = {1, 6};
-        Integer[] arr2 = {0, 3};
+    public void testComputeMixedValidAndInvalidIndices() {
+        ArrayList<Integer> arr1 = new ArrayList<>();
+        arr1.add(1);
+        arr1.add(6);
+        ArrayList<Integer> arr2 = new ArrayList<>();
+        arr2.add(0);
+        arr2.add(3);
         String str1 = "Me";
         String str2 = "LikeYou";
         String expected = "eLe";
